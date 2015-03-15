@@ -28,7 +28,8 @@ if ($ENV{MPFR_LIBS}) {
 use_ppport;
 use_xshelper;
 cc_warnings;
-cc_libs 'mpfr';
+#cc_libs 'mpfr';
+cc_libs '-lmpfr -lgmp';
 cc_src_paths 'xs';
 author_tests 'xt';
 auto_set_repository;
